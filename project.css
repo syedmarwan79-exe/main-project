@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+#logo{
+    text-decoration: none;
+    color: #00e5ff;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1b1b1b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00e5ff;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: url("./assects/15.jpeg") center/cover;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 12px 25px;
+    margin-right: 10px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Games */
+
+.games {
+    padding: 60px;
+    text-align: center;
+}
+
+.games h2 {
+    margin-bottom: 40px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Membership */
+
+.membership {
+    padding: 60px;
+    text-align: center;
+}
+
+.member-box {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.plan {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-8px);
+}
+
+.plan h1 {
+    color: #00e5ff;
+    margin: 15px 0;
+}
+
+.plan p {
+    margin: 10px 0;
+}
+
+.plan button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tournament */
+
+.tournament {
+    padding: 60px;
+    text-align: center;
+}
+
+.tournament-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.t-card {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.t-card:hover {
+    transform: translateY(-8px);
+}
+
+.t-card p {
+    margin: 10px 0;
+}
+
+.t-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Gallery */
+
+.gallery {
+    padding: 60px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    animation: slide 16s infinite;
+}
+
+.gallery-container img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.gallery-container img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.gallery-container img:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.gallery-container img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.gallery-container img:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.gallery-container img:nth-child(6) {
+    animation-delay: 10s;
+}
+
+.gallery-container img:nth-child(7) {
+    animation-delay: 12s;
+}
+
+.gallery-container img:nth-child(8) {
+    animation-delay: 14s;
+}
+
+@keyframes slide {
+
+    0% {
+        opacity: 0;
+    }
+
+    5%, 12% {
+        opacity: 1;
+    }
+
+    17%, 100% {
+        opacity: 0;
+    }
+
+}
+
+/* Contact */
+
+.contact {
+    padding: 60px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+form {
+    width: 55%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    padding: 12px 25px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    width: 40%;
+}
+
+.info p {
+    margin: 15px 0;
+}
+
+/* Footer */
+
+footer {
+    background: #1b1b1b;
+    padding: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    margin-top: 10px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.footer-content a:hover {
+    color: #00e5ff;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .games,
+    .membership,
+    .tournament,
+    .gallery,
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    .member-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tournament-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact-box {
+        flex-direction: column;
+    }
+
+    form,
+    .info {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+}
